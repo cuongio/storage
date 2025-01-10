@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* Thanh điều hướng cố định */
+/* Thanh điều hướng cố định với hiệu ứng Blur */
+/* Thanh điều hướng cố định với hiệu ứng Blur */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+
+  /* Hiệu ứng Blur */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.9); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Logo nổi bật */
+.logo {
+  position: relative;
+  z-index: 1100; /* Cao hơn nền navbar */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo .fa-youtube {
+  color: red;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.logo .video {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Thanh tìm kiếm */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  width: 150px;
+  max-width: 300px;
+  border-radius: 100px 0 0 100px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 9px 10px;
+  background-color: #f8f9fa;
+  color: black;
+  border-radius: 0 100px 100px 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #eaeaea;
+}
+
+/* Nút Playlist nổi */
+.playlist-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff0000;
+  padding: 15px 18px;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.playlist-button:hover {
+  background-color: #cc0000;
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.content {
+  margin-top: 70px; /* Đẩy nội dung xuống dưới thanh điều hướng */
+  padding: 20px;
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  margin: 20px 0;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video-item {
+  width: 160px;
+  margin: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.video-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video-item p {
+  font-size: 0.9em;
+  margin: 5px 0 0;
+}
+
+.loading {
+  color: blue;
+  display: none;
+}
